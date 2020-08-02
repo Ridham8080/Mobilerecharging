@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registration Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                background: url('images/backgroundimg3.jpg') no-repeat;
+                background-size: cover;
+                font-family:sans-serif;
+                color:white;
+            }
+            .home{
+                position: absolute;
+                top:40px;
+                left:20px;
+                width:10%;
+                height:20px;
+                background: none;
+                outline: none;
+                border: 2px solid greenyellow;
+                font-size:20px;
+                color:white;
+                border-radius:30px;
+                padding:15px;
+                text-decoration:none;
+            }
+            .signin{
+                position: absolute;
+                top:40px;
+                right:20px;
+                width:150px;
+                height:20px;
+                background: none;
+                outline: none;
+                border: 2px solid greenyellow;
+                font-size:20px;
+                color:white;
+                border-radius:30px;
+                padding: 15px;
+                text-decoration: none;
+            }
+            .registrationbox{
+                width:500px;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+             }
+            .registrationbox h1{
+                margin-top:10px;
+                padding-bottom: 10px;
+                border-bottom: 6px solid greenyellow;
+                margin-bottom:20px;
+            }
+            .btn{
+                margin-top: 20px;
+                width:70%;
+                height:40px;
+                background: none;
+                border: 2px solid greenyellow;
+                color:white;
+                font-size: 20px;
+            }
+            .uname{
+                position: relative;
+                left:-200px;
+                margin-top:30px;
+                width:125px;
+                font-size:18px;
+            }
+            .firstname{
+                position: relative;
+                left:150px;
+                top:-17px;
+                margin-bottom: 10px;
+                background:none;
+                outline: none;
+                border:none;
+                border-bottom: 2px solid greenyellow;
+                color:white;
+            }
+            .lastname{
+                position: relative;
+                left:80px;
+                top:-17px;
+                background:none;
+                outline: none;
+                border:none;
+                border-bottom: 2px solid greenyellow;
+                color:white;
+            }
+            .firstlable{
+                position: relative;
+                left:70px;
+                top:5px;
+            }
+            .lastlable{
+                position: relative;
+                top:5px;
+            }
+            .pwd{
+                position: relative;
+                top:-17px;
+                left:-10px;
+                background:none;
+                outline: none;
+                border:none;
+                border-bottom: 2px solid greenyellow;
+                color:white;
+            }
+            .confirnpwd,.email{
+                position: relative;
+                top:-20px;
+                left:-10px;
+                background:none;
+                outline: none;
+                border:none;
+                border-bottom: 2px solid greenyellow;
+                color:white;
+            }
+            .bdate{
+                position: relative;
+                top:-20px;
+                left:-10px;
+                background:none;
+                outline: none;
+                border:none;
+                border-bottom: 2px solid greenyellow;
+                color:white;
+            }
+            .radiobtn{
+                position: relative;
+                top:-22px;
+                left:-20px;
+                margin-left: 10px;
+            }
+            .labels{
+                padding-left:5px;
+                padding-right:15px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <a href="Home.html" class="home">Home</a>
+            <a href="loginUser.html" class="signin">Sign In</a>
+            <div class="registrationbox">
+                <h1 class="tag">Registration Form</h1>
+                <form action="Home.html" method="POST">
+                    <h2 class="uname">UserName</h2>
+                        <input class="firstname" type="text" name="firstname" placeholder="sonu"/>
+                        <label class="firstlable">First name</label>
+                        <input class="lastname" type="text" name="latname" placeholder="Patel"/>
+                        <label class="lastlable">Last name</label>
+
+                    <h2 class="uname">Password</h2>        
+                        <input class="pwd" type="password" name="pwd" placeholder="Password"/>
+
+                    <h2 class="uname">Confirm Password</h2>
+                        <input class="confirnpwd" type="password" name="repwd" placeholder="Confirm Password"/>
+                    
+                    <h2 class="uname">Email</h2>
+                        <input class="email" type="email" name="email" placeholder="abcd@gmail.com"/>
+                    
+                    <h2 class="uname">Birthdate</h2>
+                        <input class="bdate" type="date" name="bdate" placeholder="day-month-year">
+                        <h2 class="uname">Gender</h2>
+                    <div class="radiobtn">
+                        <label class="labels">
+                            <input class="radio-one" type="radio" name="">
+                            Male
+                        </label>
+                        <label>
+                            <input class="radio-two" type="radio" name="">
+                            <span class="checkmark"></span>
+                            Female
+                        </label>
+                    </div>
+                    <input  class="btn" type="submit" name="submit" value="Sign up">
+                </form>
+            </div>
+        </center>
+    </body>
+</html>
