@@ -9,18 +9,124 @@ and open the template in the editor.
         <title>Select Company</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                font-family: sans-serif;
+            }
+            body{
+                background-image: url('images/backgroundimg3.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .home{
+                position: absolute;
+                top:40px;
+                right:40px;
+                width: auto;
+                height:20px;
+                padding-top:15px;
+                padding-bottom:15px;
+                padding-left:30px;
+                padding-right: 30px;
+                background: none;
+                outline: none;
+                border: 2px solid greenyellow;
+                font-size:20px;
+                color:white;
+                border-radius:30px;
+                text-decoration:none;
+            }
+            .selectcompany{
+                position: absolute;
+                top:30%;
+                left:40%;
+            }
+            .mobileno-box{
+                width:350px;
+                height:60px;
+                margin-bottom: 30px;
+            }
+            .label_mobile{
+                position: relative;
+                left:15px;
+                color:#ffffff;
+            }
+            #input_mobile{
+                position: relative;
+                top:25px;
+                left:-75px;
+                outline: none;
+                background: none;
+                width:65%;
+                height:30px;
+                border-style: solid;
+                border-width: 1px;
+                border-radius: 30px;
+                border-color: #ffffff;
+                color:#ffffff;
+                padding-left: 10px;
+                
+            }
+            #dropdown{
+                position: absolute;
+                top:28px;
+                left:70%;
+                width: 120px;
+                height: 30px;
+                color:#ffffff;
+                font-weight: bold;
+                background: #33cc00;
+                border-radius: 30px;
+                border-style:solid; 
+                border-width:1px;
+                border-color:#ffffff;
+            }
+            #company-list{
+                display: none;
+                position: static;
+                margin-top:300px;
+                margin-left: 130px;
+                left:30%;
+                width: 80%;
+                height:200px;
+                background-color: #ffffff;
+                border-radius:12px;
+            }
+            #company-list ul{
+                display: flex;
+                list-style: none;
+            }
+            #company-list ul li{
+                padding-top:15px;
+                margin-left:70px;
+            }
+            #company-list ul li img{
+                width:70%;
+                height:80%;
+            }
+        </style>
+        <script src="js/companyplan.js">
+                
+        </script>
     </head>
     <body>
-        <form action="Home.html">
-            <div>
-                <ul>
-                    <li><a href="rechargeplandetails.html">Airtel</a></li>
-                    <li><a href="rechargeplandetails.html">Jio</a></li>
-                    <li><a href="rechargeplandetails.html">Vodafone</a></li>
-                    <li><a href="rechargeplandetails.html">Idea</a></li>
-                </ul>
+        <a href="Home.html" class="home">Home</a>
+        <div class="selectcompany">
+            <div class="mobileno-box">
+                <label class="label_mobile">Mobile no.</label>
+                <input type="text" name="mobileno." id="input_mobile" placeholder="  Enter mobile number...">
+                <button type="button" name="selectcompany" id="dropdown" onclick="displayeffect()">Select Company</button>
             </div>
-            <input type="submit" name="Home" value="Logout"/>
-        </form>    
+        </div>
+            <div id="company-list">
+                <ul>
+                    <li><img src="images/jio.png" ></li>
+                    <li><img src="images/airtel.png"></li>
+                    <li><img src="images/vodafone.png"></li>
+                    <li><img src="images/bsnl.png"></li>
+                </ul>
+        </div>    
     </body>
 </html>
