@@ -9,35 +9,154 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: sans-serif;        
+        }
+        body{
+            background:url('images/backgroundimg4.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .datatablemain{
+            width:80%;
+            height:auto;
+            background-color:#ffffff;
+            margin-top:200px;
+            margin-left:130px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .datatable{
+            width:80%;
+            height:auto;
+            background-color:#ffffff;
+            margin-top:10px;
+            margin-left:130px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .part1{
+            position: relative;
+            border-bottom:2px black solid;
+        }
+        #price{
+            position:relative;
+            top:25px;
+            left:25px;
+            padding-left:10px;
+            padding-right:10px;
+            padding-top:5px;
+            padding-bottom: 5px;
+            border-radius: 30px;
+            background:red;
+        }
+        #validity{
+            position:relative;
+            top:10px;
+            left:45%;
+        }
+        #choosebtn{
+            position:relative;
+            top:-25px;
+            left:90%;
+            padding:8px;
+            background: none;
+            border:2px #2bab0d solid;
+            font-weight:600;
+            font-size: medium;
+            color:#2bab0d;
+        }
+        #dataperday{
+            position: relative;
+            top: 30px;
+            left: 30px;
+        }
+        .fa-wifi{
+            padding-right:5px;
+        }
+        #details{
+            position:relative;
+            top:-25px;
+            left:42%;
+            margin-top:20px;
+            padding-left: 10px;
+        }
+    </style>
     <body>
-        <center>
-            <form action="confirm.html" method="POST">
-                <table border="2px">
-                    <tr>
-                        <th>
-                            Plan no.
-                        </th>
-                        <th>
-                            data/day
-                        </th>
-                        <th>
-                            Total Mobile data
-                        </th>
-                        <th>
-                            Talktime
-                        </th>
-                        <th>
-                            validity
-                        </th>
-                        <th>
-                            Price
-                        </th>
-                    </tr>
-                </table>
-                <br>
-                <input type="submit" name="submit" value="Submit">
-            </form>
-        </center>
+        <div class="datatablemain">
+            <div class="part1">  
+                <div><label id="price">2599@</label></div>
+                <div><label id="validity">Validity:365 days</label></div>
+                <div><button id="choosebtn" onclick="choosedplan(2599)">select</button></div>
+            </div>
+            <div class="part2">
+                <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>2 GB/day</div>
+                <div id="details">
+                    <label>Total Data: 2 GB/day+10 GB<br><br></label>
+                    <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                </div>
+            </div>
+        </div>
+        <div class="datatable">
+            <div class="part1">  
+                <div><label id="price">2399@</label></div>
+                <div><label id="validity">Validity:365 days</label></div>
+                <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+            </div>
+            <div class="part2">
+                <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>2 GB/day</div>
+                <div id="details">
+                    <label>Total Data: 2 GB/day<br><br></label>
+                    <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                </div>
+            </div>
+        </div>
+        <div class="datatable">
+            <div class="part1">  
+                <div><label id="price">2121@</label></div>
+                <div><label id="validity">Validity:336 days</label></div>
+                <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+            </div>
+            <div class="part2">
+                <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>1.5 GB/day</div>
+                <div id="details">
+                    <label>Total Data: 1.5 GB/day<br><br></label>
+                    <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                </div>
+            </div>
+        </div>
+        <div class="datatable">
+            <div class="part1">  
+                <div><label id="price">999@</label></div>
+                <div><label id="validity">Validity:84 days</label></div>
+                <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+            </div>
+            <div class="part2">
+                <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>3 GB/day</div>
+                <div id="details">
+                    <label>Total Data: 3 GB/day<br><br></label>
+                    <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                </div>
+            </div>
+        </div>
+        <div class="datatable">
+            <div class="part1">  
+                <div><label id="price">599@</label></div>
+                <div><label id="validity">Validity:84 days</label></div>
+                <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+            </div>
+            <div class="part2">
+                <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>2 GB/day</div>
+                <div id="details">
+                    <label>Total Data: 2 GB/day<br><br></label>
+                    <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

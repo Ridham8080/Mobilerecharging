@@ -91,7 +91,7 @@ and open the template in the editor.
                 left:30%;
                 width: 80%;
                 height:200px;
-                background-color: #ffffff;
+                background-color:#ffffff;
                 border-radius:12px;
             }
             #company-list ul{
@@ -107,12 +107,9 @@ and open the template in the editor.
                 height:80%;
             }
         </style>
-        <script src="js/companyplan.js">
-                
-        </script>
     </head>
     <body>
-        <a href="Home.html" class="home">Home</a>
+        <a href="Home.html" class="home">Logout</a>
         <div class="selectcompany">
             <div class="mobileno-box">
                 <label class="label_mobile">Mobile no.</label>
@@ -122,11 +119,15 @@ and open the template in the editor.
         </div>
             <div id="company-list">
                 <ul>
-                    <li><img src="images/jio.png" ></li>
-                    <li><img src="images/airtel.png"></li>
-                    <li><img src="images/vodafone.png"></li>
-                    <li><img src="images/bsnl.png"></li>
+                    <li><div id="1" onclick="jio()"><img src="images/jio.png"></div></li>
+                    <li><div id="2" onclick="airtel()"><img src="images/airtel.png"></div></li>
+                    <li><div id="3" onclick="vodafone()"><img src="images/vodafone.png"></div></li>
+                    <li><div id="4" onclick="bsnl()"><img src="images/bsnl.png"></div></li>
                 </ul>
-        </div>    
+            </div>
+        </div>
+        <script src="js/companyplan.js">
+            
+        </script>
     </body>
 </html>

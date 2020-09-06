@@ -9,12 +9,282 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                font-family:sans-serif;
+            }
+            body{
+                background: url('images/backgroundimg4.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .home{
+                position: absolute;
+                top:20px;
+                left:20px;
+                
+                background: none;
+                outline: none;
+                border: 2px solid greenyellow;
+                font-size:20px;
+                color:white;
+                border-radius:30px;
+                padding:10px 20px 10px;
+                text-decoration:none;
+            }
+            .plan-list{
+                background-color:rgb(0,100,0);
+                height:50px;
+                width:100%;
+                margin-top: 80px;
+            }
+            .plan-list ul{
+                position: relative;
+                left:33%;
+                display:flex;
+            }
+            .active{
+                background-color:#2bab0d;
+                border-radius: 3px;
+            }
+            .plan-list ul li{
+                padding-left:25px;
+                padding-right:25px; 
+                padding-top:15px;
+                padding-bottom:10px;
+                list-style: none;
+            }
+            .plan-list ul li a{
+                color:white;
+                font-size: 20px;;
+                font-weight: bold;
+                text-decoration:none;
+            }
+            .plan-list ul li:hover{
+                background-color: #2bab0d;
+            }
+            .tab--content{
+                color:#fff;
+            }
+            .datatablemain{
+                width:80%;
+                height:auto;
+                background-color:#ffffff;
+                margin-top:110px;
+                margin-left:130px;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+            }
+            .datatable{
+                width:80%;
+                height:auto;
+                background-color:#ffffff;
+                margin-top:10px;
+                margin-left:130px;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+            }
+            .part1{
+                position: relative;
+                border-bottom:2px black solid;
+            }
+            #price{
+                position:relative;
+                top:25px;
+                left:25px;
+                padding-left:10px;
+                padding-right:10px;
+                padding-top:5px;
+                padding-bottom: 5px;
+                border-radius: 30px;
+                background:red;
+            }
+            #validity{
+                position:relative;
+                top:10px;
+                left:45%;
+            }
+            #choosebtn{
+                position:relative;
+                top:-25px;
+                left:90%;
+                padding:8px;
+                background: none;
+                border:2px #2bab0d solid;
+                font-weight:600;
+                font-size: medium;
+                color:#2bab0d;
+                border-radius:3px;
+            }
+            #dataperday{
+                position: relative;
+                top: 30px;
+                left: 30px;
+            }
+            .fa-wifi{
+                padding-right:5px;
+            }
+            #details{
+                position:relative;
+                top:-25px;
+                left:42%;
+                margin-top:20px;
+                padding-left: 10px;
+            }
+        </style>
     </head>
     <body>
-        <ul>
-            <li><a href="talktimeplantable.html">Talktime Plan</a></li>
-            <li><a href="regularplantable.html">Regular Plan</a></li>
-            <li><a href="mahadatapacktable.html">Mahadata Pack</a></li>
-        </ul>
+        <a href="companyplan.html" class="home">Previous</a>
+        <div class="plan-list">
+            <ul>
+                <li id="0" style="background-color:#2bab0d;"><a href="#" onclick="openlist('talktime','0')">Talktime Plan</a></li>
+                <li id="1"><a href="#" onclick="openlist('regularplan','1')">Regular Plan</a></li>
+                <li id="2"><a href="#" onclick="openlist('mahadatapack','2')">Mahadata Pack</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="plans" id="talktime" style="display:block;">
+
+                <div class="datatablemain">
+                    <div class="part1">  
+                        <div><label id="price">2399@</label></div>
+                        <div><label id="validity">Validity:365 days</label></div>
+                        <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+                    </div>
+                    <div class="part2">
+                        <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>2 GB/day</div>
+                        <div id="details">
+                            <label>Total Data: 2 GB/day<br><br></label>
+                            <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="datatable">
+                    <div class="part1">  
+                        <div><label id="price">2399@</label></div>
+                        <div><label id="validity">Validity:365 days</label></div>
+                        <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+                    </div>
+                    <div class="part2">
+                        <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>2 GB/day</div>
+                        <div id="details">
+                            <label>Total Data: 2 GB/day<br><br></label>
+                            <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plans" id="regularplan" style="display:none;">
+                
+                <div class="datatablemain">
+                    <div class="part1">  
+                        <div><label id="price">2599@</label></div>
+                        <div><label id="validity">Validity:365 days</label></div>
+                        <div><button id="choosebtn" onclick="choosedplan(2599)">select</button></div>
+                    </div>
+                    <div class="part2">
+                        <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>2 GB/day</div>
+                        <div id="details">
+                            <label>Total Data: 2 GB/day+10 GB<br><br></label>
+                            <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="datatable">
+                    <div class="part1">  
+                        <div><label id="price">2399@</label></div>
+                        <div><label id="validity">Validity:365 days</label></div>
+                        <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+                    </div>
+                    <div class="part2">
+                        <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>2 GB/day</div>
+                        <div id="details">
+                            <label>Total Data: 2 GB/day<br><br></label>
+                            <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="datatable">
+                    <div class="part1">  
+                        <div><label id="price">2121@</label></div>
+                        <div><label id="validity">Validity:336 days</label></div>
+                        <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+                    </div>
+                    <div class="part2">
+                        <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>1.5 GB/day</div>
+                        <div id="details">
+                            <label>Total Data: 1.5 GB/day<br><br></label>
+                            <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="datatable">
+                    <div class="part1">  
+                        <div><label id="price">999@</label></div>
+                        <div><label id="validity">Validity:84 days</label></div>
+                        <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+                    </div>
+                    <div class="part2">
+                        <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>3 GB/day</div>
+                        <div id="details">
+                            <label>Total Data: 3 GB/day<br><br></label>
+                            <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="datatable">
+                    <div class="part1">  
+                        <div><label id="price">599@</label></div>
+                        <div><label id="validity">Validity:84 days</label></div>
+                        <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+                    </div>
+                    <div class="part2">
+                        <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>2 GB/day</div>
+                        <div id="details">
+                            <label>Total Data: 2 GB/day<br><br></label>
+                            <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="plans" id="mahadatapack" style="display:none;">
+                
+                <div class="datatablemain">
+                    <div class="part1">  
+                        <div><label id="price">2399@</label></div>
+                        <div><label id="validity">Validity:365 days</label></div>
+                        <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+                    </div>
+                    <div class="part2">
+                        <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>2 GB/day</div>
+                        <div id="details">
+                            <label>Total Data: 2 GB/day<br><br></label>
+                            <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="datatable">
+                    <div class="part1">  
+                        <div><label id="price">2399@</label></div>
+                        <div><label id="validity">Validity:365 days</label></div>
+                        <div><button id="choosebtn" onclick="choosedplan()">select</button></div>
+                    </div>
+                    <div class="part2">
+                        <div id="dataperday"><i class="fa fa-wifi" aria-hidden="true"></i>2 GB/day</div>
+                        <div id="details">
+                            <label>Total Data: 2 GB/day<br><br></label>
+                            <label>Talktime: jio to jio unlimited & jio to non-jio 3000 minutes</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="js/rechargeplandetails.js"></script>
     </body>
 </html>

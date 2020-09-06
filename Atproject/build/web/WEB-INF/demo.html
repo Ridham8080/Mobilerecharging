@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                font-family:sans-serif;
+            }
+            body{
+                background:url("images/backgroundimg3.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                color:#fff;
+            }
+            .maincontainer{
+                position:absolute;
+                top:10%;
+                left:35%;
+                width:30%;
+                height:80%;
+                background-color: black;
+            }
+            .header{
+                margin: 10% auto 20%;
+                padding-bottom:5px;
+                border-bottom:5px solid rgb(3, 158, 50) ;
+                width:75%;
+            }
+
+            .header h1{
+                text-align: center;
+            }
+            .mainclass{
+                position: static;
+                padding-left:20%;   
+            }
+            label{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 17px;
+            }
+            .label1{
+                position: relative;
+                top:5px;
+                left:2px;
+            }
+            #planno{
+                position: relative;
+                top:22px;
+                left:-20%;
+            }
+            .label2{
+                position: relative;
+                top:40px;
+                left:0;
+            }
+            #radiobuttons{
+                position: relative;
+                top:45px;
+                left:10px;
+            }
+            .label3{
+                position: relative;
+                top:50px;
+                left:0;
+            }
+            #total-mobile-data{
+                position: relative;
+                top:70px;
+                left:-28%;
+            }
+            .label4{
+                position: relative;
+                top:105px;
+                left:-72%;
+            }
+            #talktime{
+                position: relative;
+                top:105px;
+                left:;
+            }
+            .label5{
+                
+            }
+            #validity{
+                position: relative;
+                top:45px;
+                left:20%;
+            }
+            .label6{
+            }
+            #price{
+                position: relative;
+                top:80px;
+                left:-20%;  
+            }
+        </style>
+    </head>
+    <body>
+        <form action="confirm2.html" method="POST">
+            <div class="maincontainer">
+                <div class="header">
+                    <h1>For Regular Plan</h1>
+                </div>
+                <div class="mainclass">
+                    <label class="label1">Plan No.</label>   
+            
+                    <input type="text" id="planno" name="plan no"/>
+                    
+                    <label class="label2"><p>Choose Data Plan</p></label>
+                    <div id="radiobuttons">
+                        <input type="radio" value="1 gb" name="1gb"><label>1 GB/day</label><br>
+                        <input type="radio" value="1.5 gb" name="1.5gb"><label>1.5 GB/day</label><br>
+                        <input type="radio" value="2 gb" name="2gb"><label>2 GB/day</label><br>                            
+                    </div>    
+                    <label class="label3">Mobile data</label>
+                    <input type="text" name="mobiledata" id="total-mobile-data"/>
+                    <label class="label4">Talktime</label>    
+                    <input type="text" name="talktime" id="talktime"/>
+                    <label class="label5">Validity</label>
+                    <input type="text" name="validity" id="validity"/>
+                    <label class="label6">price</label>
+                    <input type="text" name="price" id="price"/>
+                    <input type="submit" name="submit" value="Submit" class="submit"/> 
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
