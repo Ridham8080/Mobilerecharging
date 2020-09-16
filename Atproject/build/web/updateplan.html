@@ -6,53 +6,155 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Add plan</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+                font-family: sans-serif;
+            }
+            body{
+                background-image: url("images/backgroundimg3.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                color:#fff;
+            }
+            table{
+                position:absolute;
+                top:40%;
+                left:40%;
+            }
+            .home{
+                position: absolute;
+                top:20px;
+                left:20px;   
+                background: none;
+                outline: none;
+                border: 2px solid greenyellow;
+                font-size:20px;
+                color:white;
+                border-radius:30px;
+                padding:10px 20px 10px;
+                text-decoration:none;
+            }
+        
+            .select_option{
+                background:none;
+                color:#fff;
+                width:200px;
+                height:35px;
+                font-size: 16px;
+                border-color:rgb(2, 201, 52);
+                margin-left:30px;
+                margin-bottom: 20px;
+            }
+            .labels{
+                margin-left:30px;
+            }
+            option{
+                background-color:#000;
+            }
+            #company_name{
+                padding-left:23px;
+            }
+            #select_plan{
+                padding-left:35px;
+            }
+            .submit{
+                width:130%;
+                height:40px;
+                background:none;
+                border:3px solid rgb(2, 201, 52);
+                color:#fff;
+                font-size:1.1em;
+                margin-top:px;
+                margin-left: -5%;
+            }
+            input[type="text"]{
+                margin-bottom: 20px;
+                width:200px;
+                height:30px;
+                border:2px solid rgb(2, 201, 52);
+                background:none;
+                margin-left:28px;
+                color:#fff;
+                font-size: 16px;
+                padding-left:5px;
+            }
+        </style>
     </head>
     <body>
-         <center>
-            <form action="confirm2.html" method="post">
-                <table>
-                    
-                    <tr>
-                        <td>
-                            Company
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select name="company">
-                                <option>Airtel</option>
-                                <option>Tata Sky</option>
-                                <option>GTPL</option>
-                                <option>D2h</option>
-                                <option>Videocon</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select name="option">
-                                <option></option>
-                                <option>Tata Sky</option>
-                                <option>GTPL</option>
-                                <option>D2h</option>
-                                <option>Videocon</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="plan no"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="submit" name="submit" value="Submit"/>
-                        </td>
-                    </tr>
-                </table>
-            </form>
+        <a href="adminpage.html" class="home">Previous</a>
+        <table>
+            <tr>
+                <td>
+                    <div class="labels">
+                        Company
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="company" id="company_name" class="select_option">
+                        <option>--select company--</option>
+                        <option>Airtel</option>
+                        <option>Tata Sky</option>
+                        <option>GTPL</option>
+                        <option>D2h</option>
+                        <option>Videocone</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="labels">
+                        Plan Category
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="plancategory" class="select_option" id="select_plan">
+                        <option>--select plan--</option>
+                        <option>Talktime plan</option>
+                        <option>Regular plan</option>
+                        <option>Mahadata pack</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="labels">
+                        Plan No
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="planno" placeholder="rel11223344">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="labels">
+                        Mobile data
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="planno" placeholder="1.5GB">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="next" value="Next" class="submit" onclick="render_page()"/>
+                </td>
+            </tr>
+        </table>  
+    <script src="js/deleteplan.js">
+    </script> 
     </body>
 </html>

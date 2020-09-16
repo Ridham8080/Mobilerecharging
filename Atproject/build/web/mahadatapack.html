@@ -9,58 +9,134 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                font-family:sans-serif;
+            }
+            body{
+                background:url("images/backgroundimg3.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                color:#fff;
+            }
+            .home{
+                position: absolute;
+                top:20px;
+                left:20px;
+                
+                background: none;
+                outline: none;
+                border: 2px solid greenyellow;
+                font-size:20px;
+                color:white;
+                border-radius:30px;
+                padding:10px 20px 10px;
+                text-decoration:none;
+            }
+            .maincontainer{
+                position:absolute;
+                top:5%;
+                left:28%;
+                width:36%;
+                height:90%;
+                border: 4px solid rgb(3, 158, 50);
+            }
+            .header{
+                margin: 8% 10px 15px 37px;
+                padding-bottom:5px;
+                border-bottom:5px solid rgb(3, 158, 50) ;
+                width:60%;
+            }
+            .header h1{
+                text-align:justify;
+            }
+            div{
+                margin-top:15px;
+                padding-left:68px;
+            }
+            .label{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color:#fff;
+                font-size: 18px;
+                position:relative;
+                top:5px;
+                left:0px;
+            }
+            .textbox{
+                position: relative;
+                top:5px;
+                left:0px;
+                width: 200px;
+                height:30px;
+                border-radius:6px;
+                border:1.5px solid rgb(2, 201, 52);
+                background:none;
+                color:#fff;
+                font-size:18px;
+
+            }
+            .separate{
+                height:120px;
+            }
+            #radiobuttons{
+                margin-left:-40px;
+            }
+            #radiobuttons input{
+                margin-right:8px;
+             
+            }
+            .submit{
+                width:80%;
+                height:40px;
+                background:none;
+                border:2px solid rgb(2, 201, 52);
+                color:#fff;
+                font-size:1.1em;
+                margin-top:20px;
+                margin-left: -5%;
+            }
+            .submit:hover{
+                background:rgb(2, 201, 52);
+            }
+        </style>
     </head>
     <body>
+        <a href="addplan.html" class="home">Previous</a>
         <form action="confirm2.html" method="POST">
-            <center>
-                <table>
-                    <tr>
-                        <td>
-                            Plan No.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="plan no"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Mobile data
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="mobiledata"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Validity
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="validity"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            price
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="price"/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="submit" name="submit" value="Submit"/>
-                        </td>
-                    </tr>
-                </table>
-            </center>
+            <div class="maincontainer">
+                <div class="header">
+                    <h1>For Mahadata Pack</h1>
+                </div>
+                <div class="mainclass">
+                    <div>
+                        <label class="label">Plan No.</label><br>
+                        <input type="text" id="planno" name="plan no" class="textbox"/>
+                    </div>
+                    <div class="separate">
+                        <label class="label"><p>Choose Data Plan</p></label>
+                        <div id="radiobuttons">
+                            <input type="radio" value="1 gb" name="1gb"><label>1 GB/day</label><br><br>
+                            <input type="radio" value="1.5 gb" name="1.5gb"><label>1.5 GB/day</label><br><br>
+                            <input type="radio" value="2 gb" name="2gb"><label>2 GB/day</label><br><br>                  
+                        </div>
+                    </div>    
+                    <div>
+                        <label class="label">Mobile data</label><br>
+                        <input type="text" name="mobiledata" id="total-mobile-data" class="textbox"/>
+                    </div>
+                    <div>
+                        <label class="label">Validity</label><br>
+                        <input type="text" name="validity" id="validity" class="textbox"/>
+                    </div>
+                    <div>
+                        <label class="label">price</label><br>
+                        <input type="text" name="price" id="price" class="textbox"/>
+                    </div>
+                    <input type="submit" name="submit" value="Submit" class="submit"/> 
+                </div>
+            </div>
         </form>
     </body>
 </html>
